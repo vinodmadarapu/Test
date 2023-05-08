@@ -46,6 +46,7 @@ name: 'Terraform'
 
 on:
 
+  workflow_dispatch:
 
 permissions:
   contents: read
