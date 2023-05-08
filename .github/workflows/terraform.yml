@@ -72,10 +72,14 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
+    - name: Run a multi-line script
+      run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Init
-      run: terraform init
+    #- name: Terraform Init
+    #  run: terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     #- name: Terraform Format
