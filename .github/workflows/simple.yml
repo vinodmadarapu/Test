@@ -20,5 +20,5 @@ jobs:
         run: java -version
         
       - name: Run a one-line script
-        run: java ".src/samplecode.java"        
+        run: java src/samplecode.java        
 
