@@ -28,5 +28,5 @@ jobs:
               break
             fi
             echo "$line"
-          done < "$json_file"        
+          done # < "$json_file"        
 
