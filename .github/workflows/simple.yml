@@ -24,7 +24,7 @@ jobs:
           json_file="input.json"
           while IFS= read -r line
           do
-            if [[ $line == *logview* ]]; then
+            if [[ $line == *logdna_view* ]]; then
               break
             fi
             echo "$line"
