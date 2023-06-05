@@ -24,7 +24,7 @@ jobs:
           json_file="input.json"
           while IFS= read -r line
           do
-            if [[ $line == "log* ]]; then
+            if [[ $line == *logview* ]]; then
               break
             fi
             echo "$line"
