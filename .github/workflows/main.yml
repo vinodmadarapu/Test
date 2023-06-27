@@ -1,0 +1,21 @@
+name: Remove Folder from Checked-Out Code
+
+on:
+ workflow_dispatch
+
+jobs:
+  remove_folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Remove Folder
+        run: |
+          if [ -d Test/tf ]; then   
+            rm -rf Test/tf
+          else
+            echo "no folder exists"
+          fi
+
