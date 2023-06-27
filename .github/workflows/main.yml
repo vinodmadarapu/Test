@@ -19,4 +19,6 @@ jobs:
           else
             echo "no folder exists"
           fi
+          echo "after remove"
+          ls
 
