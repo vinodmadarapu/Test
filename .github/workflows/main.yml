@@ -14,8 +14,8 @@ jobs:
       - name: Remove Folder
         run: |
           ls
-          if [ -d src/test ]; then   
-            rm -rf src/test
+          if [ -d src/test1 ]; then   
+            rm -rf src/test1
           else
             echo "no folder exists"
           fi
