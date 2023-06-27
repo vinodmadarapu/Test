@@ -13,6 +13,7 @@ jobs:
 
       - name: Remove Folder
         run: |
+          ls
           if [ -d Test/tf ]; then   
             rm -rf Test/tf
           else
