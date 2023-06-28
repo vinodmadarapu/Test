@@ -9,8 +9,6 @@ on:
        default: "myapp"
      VERSION:
        default: "version2"
-     CHG_DES:
-       default: ${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}
    
 
 jobs:
@@ -23,6 +21,7 @@ jobs:
 
       - name: Remove Folder
         run: |
+            
+            echo "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}" >> ${{CHG_DES}}
             echo ${{CHG_DES}}
-            #echo "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}" 
 
