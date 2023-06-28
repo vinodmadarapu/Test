@@ -21,6 +21,6 @@ jobs:
 
       - name: Remove Folder
         run: |            
-            my_var=$(echo "Hello, World!")
+            my_var=$(echo "Deployment of ${{APP_NAME}} in ${{ENVIRONMENT}} with ${{VERSION}}")
             echo $my_var
 
