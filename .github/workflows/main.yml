@@ -9,6 +9,8 @@ on:
        default: "myapp"
      VERSION:
        default: "version2"
+     CHG_DES:
+       default: "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}"
    
 
 jobs:
@@ -20,5 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Remove Folder
-        run: echo "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}"
+        run: |
+            echo ${{CHG_DES}}
+            #echo "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}" 
 
