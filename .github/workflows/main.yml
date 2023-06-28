@@ -1,7 +1,15 @@
 name: Remove Folder from Checked-Out Code
 
 on:
- workflow_dispatch
+ workflow_dispatch:
+   inputs:
+     ENVIRONMENT:
+       default: "prod"
+     APP_NAME:
+       default: "myapp"
+     VERSION:
+       default: "version2"
+   
 
 jobs:
   remove_folder:
@@ -13,14 +21,5 @@ jobs:
 
       - name: Remove Folder
         run: |
-          ls
-          if [ -d src/test1 ]; then   
-            rm -rf src/test1
-          else
-            echo "no folder exists"
-          fi
-          echo "after remove"
-          ls
-          cd src
-          ls
+          echo "${{APP_NAME}} in ${{ENVIRONMENT}} with ${{VERSION}}"
 
