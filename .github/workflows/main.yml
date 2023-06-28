@@ -10,7 +10,7 @@ on:
      VERSION:
        default: "version2"
      CHG_DES:
-       default: "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}"
+       default: ${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}
    
 
 jobs:
