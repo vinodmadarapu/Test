@@ -20,8 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Remove Folder
-        run: |
-            
+        run: |            
             echo "${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}}" >> $CHG_DES
-            echo ${{CHG_DES}}
+            # echo ${{CHG_DES}}
 
