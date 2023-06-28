@@ -14,13 +14,14 @@ on:
 jobs:
   remove_folder:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Set Variable
+        id: set_variable
+        run: |
+          echo "::set-output name=my_var::$(echo Deployment of ${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}})"
 
       - name: Remove Folder
-        run: |            
-            my_var=$(echo Deployment of ${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}})
-            echo $my_var
+        run: |
+          echo ${{steps.set_variable.outputs.my_var}}
+
 
