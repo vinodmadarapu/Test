@@ -11,25 +11,14 @@ on:
        default: "version2"
    
 
-jobs:
-  remove_folder:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set Variable
-        id: set_variable
-        run: |
-          echo "::set-output name=my_var::$(echo Deployment of ${{inputs.APP_NAME}} in ${{inputs.ENVIRONMENT}} with ${{inputs.VERSION}})"
-
-      - name: Remove Folder
-        run: |
-          echo ${{steps.set_variable.outputs.my_var}}
-          
+jobs:       
   remove_folder1:
-    needs: remove_folder
     runs-on: ubuntu-latest
     steps:
       - name: Remove Folder
         run: |
-          echo ${{needs.remove_folder.steps.set_variable.outputs.my_var}}          
+          touch test2023.txt
+          echo "test2023" >> test2023.txt
+          ls
 
 
