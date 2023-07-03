@@ -18,7 +18,8 @@ jobs:
       - name: Remove Folder
         run: |
           touch test2023.txt
-          echo "test2023" >> test2023.txt
+          echo "test2023content" >> test2023.txt
           ls
+          cat test2023.txt
 
 
